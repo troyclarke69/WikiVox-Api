@@ -1,0 +1,24 @@
+ALBUMSONG
+
+{
+    "album": "5f09a53f5327f234183354ff",
+    "songs": ["5f09cee95327f23418335539", "5f09cee95327f2341833553a"]
+}
+
+
+
+ARTISTALBUM
+
+{
+    "artist": "5f08dce8c05b2542107326ab",
+    "albums": ["5f09a53f5327f234183354ff", "5f09a53f5327f23418335503"]
+}
+
+
+ARTISTGENRE
+
+{
+    "artist": "5f08dce8c05b2542107326ab",
+    "genres": ["5f1106de8b4c8e13fcefcc7e", "5f1106de8b4c8e13fcefcc87"]
+}
+

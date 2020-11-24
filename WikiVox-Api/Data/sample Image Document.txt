@@ -1,0 +1,5 @@
+ALBUM
+{"Entity":"5f11c267fdc1d53acc4d2eb7","Resource":"5f09a53f5327f234183354ff","ImgUrl":"\/images\/albums\/u2\/u2-boy.jpg","PrimaryImage":1}
+
+ARTIST
+{"Entity":"5f11c267fdc1d53acc4d2eb8","Resource":"5f08dce8c05b2542107326ab","ImgUrl":"\/images\/artists\/u2\/u2-1.jpg","PrimaryImage":1}

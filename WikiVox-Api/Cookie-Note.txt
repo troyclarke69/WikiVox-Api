@@ -1,0 +1,51 @@
+﻿Refer to Console error: RefreshToken
+Console Error: Token is required
+
+:: Issue: Page fails to refresh token after 15 mins, goes back to login page
+
+Details:
+SameSite is not set or is invalid, defaults to SameSite=Lax, prevents the cookie
+from being set in in a cross-site context.
+
+Resolve by updating the attributes of the cookie;
+
+SameSite=None
+AND 
+Secure
+
+** 10/13/2020:
+** Implemented in UserController.setTokenCookie(string token)
+        {
+
+            var cookieOptions = new CookieOptions
+            {
+                HttpOnly = true,
+                Expires = DateTime.UtcNow.AddDays(7),
+                SameSite = SameSiteMode.None,
+                Secure = true
+            };
+            Response.Cookies.Append("refreshToken", token, cookieOptions);
+        }
+
+
+        //~~~~~~ Has this been resolved? I don't think so (Oct 26 2020)??
+
+
+
+
+        How would you write this js/jsx script is cs??
+
+        // import React from 'react'
+
+                const something = () => {
+
+                        const _else = 2
+                        const _something_else = 11
+
+                        let _what = _else * _something_else
+
+                        console.log(_what)
+                        console.log("?")
+                }
+
+                export default something
