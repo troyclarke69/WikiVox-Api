@@ -87,6 +87,71 @@ namespace Wikivox_Api.Controllers
             return Ok(list);
         }
 
+        [Route("[action]/{artistName}")]
+        [HttpGet]
+        //[HttpGet("{id:length(24)}", Name = "SearchByArtistName")]
+        public async Task<ActionResult<IEnumerable<Artist>>> SearchByArtistName(string artistName)
+        {
+            var artists = await _artistService.GetAllByArtistNameAsync(artistName);
+            List<Artist> list = new List<Artist>();
+
+            foreach (var _artist in artists)
+            {
+                // record may have no 'Images' tag, or may have 0 or more IDs
+                if (_artist.Images != null)
+                {
+                    if (_artist.Images.Count > 0)
+                    {
+                        var imageList = new List<Image>();
+                        foreach (var _image in _artist.Images)
+                        {
+                            var image = await _imageService.GetByIdAsync(_image);
+                            if (image != null)
+                                imageList.Add(image);
+                        }
+                        _artist.ImageData = imageList;
+                    }
+                }
+
+                // musican data
+                //if (_artist.Musicians != null)
+                //{
+                //    if (_artist.Musicians.Count > 0)
+                //    {
+                //        var musicianList = new List<Musician>();
+                //        foreach (var _musician in _artist.Musicians)
+                //        {
+                //            var musician = await _musicianService.GetByIdAsync(_musician);
+                //            if (musician != null)
+                //                musicianList.Add(musician);
+                //        }
+                //        _artist.MusicianData = musicianList;
+                //    }
+                //}
+
+                // album data
+                //if (_artist.Albums != null)
+                //{
+                //    if (_artist.Albums.Count > 0)
+                //    {
+                //        var albumList = new List<Album>();
+                //        foreach (var _album in _artist.Albums)
+                //        {
+                //            var album = await _albumService.GetByIdAsync(_album);
+                //            if (album != null)
+                //                albumList.Add(album);
+                //        }
+                //        _artist.AlbumData = albumList;
+                //    }
+                //}
+
+                list.Add(_artist);
+            }
+
+            return Ok(list);
+        }
+
+
         [HttpGet("{id:length(24)}", Name = "GetArtist")]
         public async Task<ActionResult<Artist>> GetById(string id)
         {

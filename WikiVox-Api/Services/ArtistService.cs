@@ -27,6 +27,13 @@ namespace Wikivox_Api.Services
                 .ToListAsync();
         }
 
+        public async Task<List<Artist>> GetAllByArtistNameAsync(string artistName)
+        {
+            return await _artist.Find(s => s.ArtistName.ToLower().Contains(artistName.ToLower()))
+                .SortBy(s => s.ArtistName)
+                .ToListAsync();
+        }
+
         public async Task<Artist> GetByIdAsync(string id)
         {
             return await _artist.Find<Artist>(s => s.Id == id).FirstOrDefaultAsync();
