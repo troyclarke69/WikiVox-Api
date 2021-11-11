@@ -1,10 +1,6 @@
 ﻿using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-//using System.Web;
 
 namespace Wikivox_Api.Models
 {
@@ -16,5 +12,17 @@ namespace Wikivox_Api.Models
         public string Id { get; set; }
         public string Name { get; set; }
         public int YrReleased { get; set; }
+
+        [BsonRepresentation(BsonType.ObjectId)]
+        public List<string> Images { get; set; }
+
+        [BsonIgnore]
+        public List<Image> ImageData { get; set; }
+
+        [BsonRepresentation(BsonType.ObjectId)]
+        public List<string> Songs { get; set; }
+
+        [BsonIgnore]
+        public List<Song> SongData { get; set; }
     }
 }

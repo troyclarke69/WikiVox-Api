@@ -20,13 +20,6 @@ namespace Wikivox_Api.Controllers
             _projectsService = service;
         }
 
-        //[HttpGet]
-        //public async Task<ActionResult<IEnumerable<Projects>>> GetAll()
-        //{
-        //    var Projects = await _projectsService.GetAllAsync();
-        //    return Ok(Projects);
-        //}
-
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Projects>>> GetAll()
         {

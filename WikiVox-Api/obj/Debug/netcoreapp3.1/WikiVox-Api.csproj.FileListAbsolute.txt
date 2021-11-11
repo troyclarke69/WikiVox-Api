@@ -44,7 +44,6 @@ C:\Users\USER\source\repos\DotNet\WikiVox-Api\WikiVox-Api\bin\Debug\netcoreapp3.
 C:\Users\USER\source\repos\DotNet\WikiVox-Api\WikiVox-Api\bin\Debug\netcoreapp3.1\Data\Genres.json
 C:\Users\USER\source\repos\DotNet\WikiVox-Api\WikiVox-Api\bin\Debug\netcoreapp3.1\Data\Musicians.json
 C:\Users\USER\source\repos\DotNet\WikiVox-Api\WikiVox-Api\bin\Debug\netcoreapp3.1\Data\Songs.json
-C:\Users\USER\source\repos\DotNet\WikiVox-Api\WikiVox-Api\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
 C:\Users\USER\source\repos\DotNet\WikiVox-Api\WikiVox-Api\bin\Debug\netcoreapp3.1\WikiVox-Api.exe
 C:\Users\USER\source\repos\DotNet\WikiVox-Api\WikiVox-Api\bin\Debug\netcoreapp3.1\WikiVox-Api.deps.json
 C:\Users\USER\source\repos\DotNet\WikiVox-Api\WikiVox-Api\bin\Debug\netcoreapp3.1\WikiVox-Api.runtimeconfig.json
@@ -88,6 +87,7 @@ C:\Users\USER\source\repos\DotNet\WikiVox-Api\WikiVox-Api\bin\Debug\netcoreapp3.
 C:\Users\USER\source\repos\DotNet\WikiVox-Api\WikiVox-Api\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
 C:\Users\USER\source\repos\DotNet\WikiVox-Api\WikiVox-Api\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
 C:\Users\USER\source\repos\DotNet\WikiVox-Api\WikiVox-Api\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\USER\source\repos\DotNet\WikiVox-Api\WikiVox-Api\obj\Debug\netcoreapp3.1\WikiVox-Api.csprojAssemblyReference.cache
 C:\Users\USER\source\repos\DotNet\WikiVox-Api\WikiVox-Api\obj\Debug\netcoreapp3.1\WikiVox-Api.AssemblyInfoInputs.cache
 C:\Users\USER\source\repos\DotNet\WikiVox-Api\WikiVox-Api\obj\Debug\netcoreapp3.1\WikiVox-Api.AssemblyInfo.cs
 C:\Users\USER\source\repos\DotNet\WikiVox-Api\WikiVox-Api\obj\Debug\netcoreapp3.1\WikiVox-Api.csproj.CoreCompileInputs.cache
@@ -99,3 +99,4 @@ C:\Users\USER\source\repos\DotNet\WikiVox-Api\WikiVox-Api\obj\Debug\netcoreapp3.
 C:\Users\USER\source\repos\DotNet\WikiVox-Api\WikiVox-Api\obj\Debug\netcoreapp3.1\WikiVox-Api.dll
 C:\Users\USER\source\repos\DotNet\WikiVox-Api\WikiVox-Api\obj\Debug\netcoreapp3.1\WikiVox-Api.pdb
 C:\Users\USER\source\repos\DotNet\WikiVox-Api\WikiVox-Api\obj\Debug\netcoreapp3.1\WikiVox-Api.genruntimeconfig.cache
+C:\Users\USER\source\repos\DotNet\WikiVox-Api\WikiVox-Api\obj\Debug\netcoreapp3.1\scopedcss\bundle\WikiVox-Api.styles.css

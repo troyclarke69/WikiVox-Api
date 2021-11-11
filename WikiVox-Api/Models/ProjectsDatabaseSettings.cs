@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace Wikivox_Api.Models
+﻿namespace Wikivox_Api.Models
 {
     public interface IProjects_ApiDatabaseSettings
     {
@@ -11,6 +6,7 @@ namespace Wikivox_Api.Models
         string DatabaseName { get; set; }
         string ProjectsCollectionName { get; set; }
         string ContactCollectionName { get; set; }
+        string TrafficCollectionName { get; set; }
 
 
     }
@@ -20,6 +16,7 @@ namespace Wikivox_Api.Models
         public string DatabaseName { get; set; }
         public string ProjectsCollectionName { get; set; }
         public string ContactCollectionName { get; set; }
+        public string TrafficCollectionName { get; set; }
 
     }
 }

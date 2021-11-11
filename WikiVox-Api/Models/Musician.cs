@@ -1,6 +1,7 @@
 ﻿using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 using System;
+using System.Collections.Generic;
 
 namespace Wikivox_Api.Models
 {
@@ -19,5 +20,11 @@ namespace Wikivox_Api.Models
         public Boolean isActive { get; set; }
         public string HomeTown { get; set; }
         public string HomeCountry { get; set; }
+
+        [BsonRepresentation(BsonType.ObjectId)]
+        public List<string> Images { get; set; }
+
+        [BsonIgnore]
+        public List<Image> ImageData { get; set; }
     }
 }

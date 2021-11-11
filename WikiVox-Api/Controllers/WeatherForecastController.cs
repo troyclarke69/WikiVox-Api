@@ -13,9 +13,7 @@ namespace Wikivox_Api.Controllers
     {
         private static readonly string[] Summaries = new[]
         {
-            "Fuck", "Shit", "Cunt", "Poo", 
-            "Damn", "Hell", "Yesh", "Munk", 
-            "Donkey", "Sweet"
+            "12-17"
         };
 
         private readonly ILogger<WeatherForecastController> _logger;

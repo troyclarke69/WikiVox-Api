@@ -14,14 +14,17 @@ namespace Wikivox_Api.Controllers
         private readonly ImageService _imageService;
         private readonly MusicianService _musicianService;
         private readonly AlbumService _albumService;
+        private readonly SongService _songService;
 
         public ArtistController(ArtistService service, ImageService ImageService, 
-                                MusicianService MusicianService, AlbumService AlbumService)
+                                MusicianService MusicianService, AlbumService AlbumService, 
+                                SongService SongService)
         {
             _artistService = service;
             _imageService = ImageService;
             _musicianService = MusicianService;
             _albumService = AlbumService;
+            _songService = SongService;
 
         }
 
@@ -84,6 +87,36 @@ namespace Wikivox_Api.Controllers
                 list.Add(_artist);
             }
             
+            return Ok(list);
+        }
+
+        [Route("[action]")]
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<Artist>>> GetFeatured()
+        {
+            var artists = await _artistService.GetFeaturedAsync();
+            List<Artist> list = new List<Artist>();
+
+            foreach (var _artist in artists)
+            {
+                // record may have no 'Images' tag, or may have 0 or more IDs
+                if (_artist.Images != null)
+                {
+                    if (_artist.Images.Count > 0)
+                    {
+                        var imageList = new List<Image>();
+                        foreach (var _image in _artist.Images)
+                        {
+                            var image = await _imageService.GetByIdAsync(_image);
+                            if (image != null)
+                                imageList.Add(image);
+                        }
+                        _artist.ImageData = imageList;
+                    }
+                }
+                list.Add(_artist);
+            }
+
             return Ok(list);
         }
 
@@ -177,7 +210,7 @@ namespace Wikivox_Api.Controllers
                 }
             }
 
-            // musican data
+            // musican (& images) data
             if (Artist.Musicians != null)
             {
                 if (Artist.Musicians.Count > 0)
@@ -186,8 +219,22 @@ namespace Wikivox_Api.Controllers
                     foreach (var _musician in Artist.Musicians)
                     {
                         var musician = await _musicianService.GetByIdAsync(_musician);
-                        if (musician != null)
-                            musicianList.Add(musician);
+                        if (musician != null && musician.Images != null)
+                        {
+                            if (musician.Images.Count > 0)
+                            {
+                                var imageList = new List<Image>();
+                                foreach (var _image in musician.Images)
+                                {
+                                    var image = await _imageService.GetByIdAsync(_image);
+                                    if (image != null)
+
+                                        imageList.Add(image);
+                                }
+                                musician.ImageData = imageList;
+                            }
+                        }
+                        musicianList.Add(musician);
                     }
                     Artist.MusicianData = musicianList;
                 }
@@ -202,8 +249,40 @@ namespace Wikivox_Api.Controllers
                     foreach (var _album in Artist.Albums)
                     {
                         var album = await _albumService.GetByIdAsync(_album);
-                        if (album != null)
-                            albumList.Add(album);
+
+                        if (album != null && album.Images != null)
+                        {
+                            if (album.Images.Count > 0)
+                            {
+                                var imageList = new List<Image>();
+                                foreach (var _image in album.Images)
+                                {
+                                    var image = await _imageService.GetByIdAsync(_image);
+                                    if (image != null)
+
+                                        imageList.Add(image);
+                                }
+                                album.ImageData = imageList;
+                            }
+                        }
+
+                        if (album != null && album.Songs != null)
+                        {
+                            if (album.Songs.Count > 0)
+                            {
+                                var songList = new List<Song>();
+                                foreach (var _song in album.Songs)
+                                {
+                                    var song = await _songService.GetByIdAsync(_song);
+                                    if (song != null)
+
+                                        songList.Add(song);
+                                }
+                                album.SongData = songList;
+                            }
+                        }
+
+                        albumList.Add(album);
                     }
                     Artist.AlbumData = albumList;
                 }

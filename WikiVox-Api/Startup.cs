@@ -46,9 +46,16 @@ namespace Wikivox_Api
                             "http://localhost:63881",
                             "http://localhost:5000",
                             "http://localhost:3000",
+                            "http://localhost:4200",
                             "https://troyclarke.tk",
                             "https://ngorder-dev.netlify.app",
-                            "https://wikivox-dev.netlify.app")
+                            "https://wikivox-dev.netlify.app",
+                            "https://wikivox-dev-1201.netlify.app",
+                            "https://wikirepo.netlify.app",
+                            "https://wikirepo.tk",
+                            "https://googster.tk",
+                            "https://troyport.netlify.app"
+                            )
                         .AllowAnyMethod()
                         .AllowAnyHeader()
                         .AllowCredentials()
@@ -102,7 +109,7 @@ namespace Wikivox_Api
 
             services.AddScoped<ProjectsService>();
             services.AddScoped<ContactService>();
-
+            services.AddScoped<TrafficService>();
 
 
             // blog-api injection
