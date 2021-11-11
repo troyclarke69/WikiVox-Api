@@ -7272,11 +7272,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\USER\\source\\repos\\DotNet\\WikiVox-Api\\WikiVox-Api\\WikiVox-Api.csproj",
+      "projectUniqueName": "C:\\Users\\USER\\source\\repos\\DotNet\\WikiVox-Api\\wikivox-api\\WikiVox-Api.csproj",
       "projectName": "WikiVox-Api",
-      "projectPath": "C:\\Users\\USER\\source\\repos\\DotNet\\WikiVox-Api\\WikiVox-Api\\WikiVox-Api.csproj",
+      "projectPath": "C:\\Users\\USER\\source\\repos\\DotNet\\WikiVox-Api\\wikivox-api\\WikiVox-Api.csproj",
       "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\USER\\source\\repos\\DotNet\\WikiVox-Api\\WikiVox-Api\\obj\\",
+      "outputPath": "C:\\Users\\USER\\source\\repos\\DotNet\\WikiVox-Api\\wikivox-api\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -7286,7 +7286,7 @@
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net5.0"
+        "netcoreapp5.0"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},

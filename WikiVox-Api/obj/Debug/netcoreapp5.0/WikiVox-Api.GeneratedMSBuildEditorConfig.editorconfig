@@ -7,4 +7,4 @@ build_property.PublishSingleFile =
 build_property.IncludeAllContentForSelfExtract = 
 build_property._SupportedPlatformList = Android,iOS,Linux,macOS,Windows
 build_property.RootNamespace = Wikivox_Api
-build_property.ProjectDir = C:\Users\USER\source\repos\DotNet\WikiVox-Api\WikiVox-Api\
+build_property.ProjectDir = c:\Users\USER\source\repos\DotNet\WikiVox-Api\WikiVox-Api\
